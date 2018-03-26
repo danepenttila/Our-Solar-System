@@ -2,17 +2,96 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello, World! - A-Frame</title>
+    <title>Welcome | VR Web Mall</title>
     <meta name="description" content="Hello, World! - A-Frame">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></link>
+    <style type="text/css">
+      #heads-up-display {
+        background-color: rgba(51, 51, 51, 0.5);
+      }
+      #heads-up-display a:link, #heads-up-display a:visited {
+        color: #FFFFFF;
+        font-weight: normal;
+      }
+      #heads-up-display a:hover {
+        font-weight: bold;
+      }
+    </style>
+
   </head>
   <body>
+
+    
+    <nav id="heads-up-display" class="navbar navbar-expand-md fixed-top">
+      <a class="navbar-brand" href="#">VR Web Mall</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="storeOptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Map Items</a>
+            <div class="dropdown-menu" aria-labelledby="storeOptions">
+              <a class="dropdown-item" href="#">Dick's Sporting Goods</a>
+              <a class="dropdown-item" href="#">Stipe Miocic Training Center</a>
+              <a class="dropdown-item" href="#">Jakprints Labratory</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    
+
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-box position="-1 0.5 -10" rotation="0 45 0" color="#CACACA"></a-box>
+      <a-sphere position="0 1.25 -12" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -10" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+
+      <!-- left pillars -->
+      <a-cylinder src="images/pillar.jpg" position="-10 0.75 -3" radius="0.5" height="7" color="#CACACA"></a-cylinder>
+      <a-cylinder src="images/pillar.jpg" position="-10 0.75 -6" radius="0.5" height="7" color="#CACACA"></a-cylinder>
+      <a-cylinder src="images/pillar.jpg" position="-10 0.75 -9" radius="0.5" height="7" color="#CACACA"></a-cylinder>
+      <a-cylinder src="images/pillar.jpg" position="-10 0.75 -12" radius="0.5" height="7" color="#CACACA"></a-cylinder>
+      <a-cylinder src="images/pillar.jpg" position="-10 0.75 -15" radius="0.5" height="7" color="#CACACA"></a-cylinder>
+      <a-cylinder src="images/pillar.jpg" position="-10 0.75 -18" radius="0.5" height="7" color="#CACACA"></a-cylinder>
+
+      <!-- right pillars -->
+      <a-cylinder src="images/pillar.jpg" position="10 0.75 -3" radius="0.5" height="7" color="#CACACA"></a-cylinder>
+      <a-cylinder src="images/pillar.jpg" position="10 0.75 -6" radius="0.5" height="7" color="#CACACA"></a-cylinder>
+      <a-cylinder src="images/pillar.jpg" position="10 0.75 -9" radius="0.5" height="7" color="#CACACA"></a-cylinder>
+      <a-cylinder src="images/pillar.jpg" position="10 0.75 -12" radius="0.5" height="7" color="#CACACA"></a-cylinder>
+      <a-cylinder src="images/pillar.jpg" position="10 0.75 -15" radius="0.5" height="7" color="#CACACA"></a-cylinder>
+      <a-cylinder src="images/pillar.jpg" position="10 0.75 -18" radius="0.5" height="7" color="#CACACA"></a-cylinder>
+
+      <!-- a-plane src="images/marble_floor.jpg" position="0 0 -12" rotation="-90 0 0" width="8" height="20" color="#7BC8A4"></a-plane -->
+      <a-plane src="images/grass_texture.jpg" position="0 0 -7" rotation="-90 0 0" width="20" height="10" color="#EAEAEA"></a-plane>
+      <a-plane src="images/grass_texture.jpg" position="0 0 -17" rotation="-90 0 0" width="20" height="10" color="#EAEAEA"></a-plane>
+      
+      <!-- right wall -->
+      <a-plane src="images/wood_walls.jpg" position="10 2 -7" rotation="0 -90 90" width="4" height="10"></a-plane>
+      <a-plane src="images/wood_walls.jpg" position="10 2 -17" rotation="0 -90 90" width="4" height="10"></a-plane>
+      
+      <!-- left wall -->
+      <a-plane src="images/wood_walls.jpg" position="-10 2 -7" rotation="0 90 90" width="4" height="10"></a-plane>
+      <a-plane src="images/wood_walls.jpg" position="-10 2 -17" rotation="0 90 90" width="4" height="10"></a-plane>
+      
+      <!-- a-sky src="images/background.jpg" color="#ECECEC"></a-sky -->
+      <a-sky src="images/sky_image.png"></a-sky>
+      <a-entity position="0 0 -1">
+        <a-camera></a-camera>
+      </a-entity>
+      
     </a-scene>
+
   </body>
 </html>
