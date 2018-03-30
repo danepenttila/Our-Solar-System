@@ -1,6 +1,6 @@
 # Overview
 DAP - 3.26.18
-Built starting from the A-Frame Boilerplate Application listed below
+This A-Frame (aframe.io) application is being used to show all the planets, and some 
+relevant information about them in an interactive webpage.
 
-# A-Frame Boilerplate
-Boilerplate for creating WebVR scenes with [A-Frame](https://aframe.io).
+Use your Spaceship of Imagination to travel the Solar System.
