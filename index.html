@@ -53,36 +53,7 @@
       }
       function showPlanet(planet){
         hidePlanets();
-        switch(planet) {
-          case "sun":
-            jQuery('#sun').attr('visible', true);
-            break;
-          case "mercury":
-            jQuery('#mercury').attr('visible', true);
-            break;
-          case "venus":
-            jQuery('#venus').attr('visible', true);
-            break;
-          case "earth":
-            jQuery('#earth').attr('visible', true);
-            jQuery('#moon').attr('visible', true);
-            break;
-          case "mars":
-            jQuery('#mars').attr('visible', true);
-            break;
-          case "jupiter":
-            jQuery('#jupiter').attr('visible', true);
-            break;
-          case "saturn":
-            jQuery('#saturn').attr('visible', true);
-            break;
-          case "uranus":
-            jQuery('#uranus').attr('visible', true);
-            break;
-          case "neptune":
-            jQuery('#neptune').attr('visible', true);
-            break;
-        }
+        jQuery('#' +planet).attr('visible', true);
       }
       jQuery(document).ready(function(){
         jQuery('a').on('click', function(e){  
@@ -170,7 +141,7 @@
     <a-scene>
 
     <!-- Sun -->
-    <a-sphere id="sun" position="-1 1.5 -10" radius="4" src="images/sun.jpg" visible="false">
+    <a-sphere id="sun" position="-1 1.5 -10" radius="10" src="images/sun.jpg" visible="false">
       <a-animation attribute="rotation"
         dur="50000"
         to="0 360 0"
@@ -179,7 +150,7 @@
     </a-sphere>
 
       <!-- Mercury -->
-      <a-sphere id="mercury" position="-1 1.5 -10" radius="1" src="images/mercury.jpg" visible="false">
+      <a-sphere id="mercury" position="-1 1.5 -10" radius=".57" src="images/mercury.jpg" visible="false">
         <a-animation attribute="rotation"
           dur="15000"
           to="0 360 0"
@@ -188,7 +159,7 @@
       </a-sphere>
 
       <!-- Venus -->
-      <a-sphere id="venus" position="-1 1.5 -10" radius="1.4" src="images/venus.jpg" visible="false">
+      <a-sphere id="venus" position="-1 1.5 -10" radius="1.47" src="images/venus.jpg" visible="false">
         <a-animation attribute="rotation"
           dur="15000"
           to="0 360 0"
@@ -197,7 +168,7 @@
       </a-sphere>
 
       <!-- Earth -->
-      <a-sphere id="earth" position="-1 1.5 -10" radius="1.5" src="images/earth.jpg">
+      <a-sphere id="earth" position="-1 1.5 -10" radius="1.5" rotation="0 0 0" color="#888888" src="images/earth_day.jpg">
         <a-animation attribute="rotation"
           dur="15000"
           to="0 360 0"
@@ -206,13 +177,13 @@
       </a-sphere>
 
       <!-- Moon -->
-      <a-entity id="moon" position="-1 1.5 -10" height="1" width="1">
+      <a-entity id="moon" position="-1 1.54 -10" height="1" width="1">
         <a-animation attribute="rotation"
           dur="20000"
           to="0 360 0"
           repeat="indefinite"
           easing="linear"></a-animation>
-        <a-sphere position="-1.5 1 -6" radius="0.25" src="images/moon.jpg">
+        <a-sphere position="-1.5 1 -6" radius=".375" src="images/moon.jpg">
           <a-animation attribute="rotation"
             dur="20000"
             to="0 360 0"
@@ -222,53 +193,58 @@
       </a-entity>
 
       <!-- Mars -->
-      <a-sphere id="mars" position="-1 1.5 -10" radius="1.6" src="images/mars.jpg" visible="false">
+      <a-sphere id="mars" position="-1 1.5 -10" radius=".795" src="images/mars.jpg" visible="false">
         <a-animation attribute="rotation"
           dur="15000"
           to="0 360 0"
           repeat="indefinite"
           easing="linear"></a-animation>
       </a-sphere>
+      <!-- Moons of Mars (Deimos, Phobos) -->
 
       <!-- Jupiter -->
-      <a-sphere id="jupiter" position="-1 1.5 -10" radius="3" src="images/jupiter.jpg" visible="false">
+      <a-sphere id="jupiter" position="-1 1.5 -10" radius="8.8" src="images/jupiter.jpg" visible="false">
         <a-animation attribute="rotation"
           dur="35000"
           to="0 360 0"
           repeat="indefinite"
           easing="linear"></a-animation>
       </a-sphere>
+      <!-- Moons of Jupiter (4 Visible: Ganymede, Callisto, Io, Europa, 69 total) -->
 
       <!-- Saturn -->
       <a-entity id="saturn" visible="false">
-        <a-sphere position="-1 1.5 -10" radius="2.2" src="images/saturn.jpg">
+        <a-sphere position="-1 1.5 -10" radius="7.175" rotation="0 0 0" src="images/saturn.jpg">
           <a-animation attribute="rotation"
             dur="15000"
             to="0 360 0"
             repeat="indefinite"
             easing="linear"></a-animation>
         </a-sphere>
-        <a-ring position="-1 1.5 -10" radius-inner="2.5" radius-outer="3.5" height="50" width="50"
-            rotation="-45 -45 -15" src="images/rings.jpg"></a-ring>
+        <a-ring position="-1 1.5 -10" radius-inner="7.5" radius-outer="10.5" height="50" width="50"
+            rotation="-45 -60 -15" src="images/rings.jpg"></a-ring>
       </a-entity>
+      <!-- Moons of Saturn (6 Visible: Titan, Rhea, Iapetus, Dione, Tethys, Enceladus, 62 total) -->
 
       <!-- Uranus -->
-      <a-sphere id="uranus" position="-1 1.5 -10" radius="2.3" src="images/uranus.jpg" visible="false">
+      <a-sphere id="uranus" position="-1 1.5 -10" radius="6" src="images/uranus.jpg" visible="false">
         <a-animation attribute="rotation"
           dur="30000"
           to="0 360 0"
           repeat="indefinite"
           easing="linear"></a-animation>
       </a-sphere>
+      <!-- Moons of Uranus (Titania visible, 27 total) -->
 
       <!-- Neptune -->
-      <a-sphere id="neptune" position="-1 1.5 -10" radius="2.6" src="images/neptune.jpg" visible="false">
+      <a-sphere id="neptune" position="-1 1.5 -10" radius="5.82" src="images/neptune.jpg" visible="false">
         <a-animation attribute="rotation"
           dur="32000"
           to="0 360 0"
           repeat="indefinite"
           easing="linear"></a-animation>
       </a-sphere>
+      <!-- Moons of Neptune (Triton visible, 14 total) -->
 
       <!-- left pillars -->
       <!-- a-cylinder src="images/pillar.jpg" position="-10 0.75 -3" radius="0.5" height="7" color="#CACACA"></a-cylinder>
@@ -300,7 +276,7 @@
       
       <!-- a-sky src="images/background.jpg" color="#ECECEC"></a-sky -->
       <a-sky src="images/sky_stars.png"></a-sky>
-      <a-entity position="0 0 -1">
+      <a-entity position="0 0 10">
         <a-camera></a-camera>
       </a-entity>
 
