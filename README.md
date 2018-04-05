@@ -6,3 +6,14 @@ relevant information about them in an interactive webpage.
 Use your Spaceship of Imagination to travel the Solar System.
 
 Can be seen at: http://mindpw3r.com/vr
+
+Updates to look forward to:
+
+1. Floating HUD that displays information about the planet you're viewing
+2. Full Solar System View
+3. Adding Major Moons (probably 6 max) for each planet
+4. Working towards scaling the planetary objects correctly (relative to each other)
+5. Smoother transitions when navigating between objects
+6. Importing actual 3D objects into A-Frame (rather than just using default Spheres)
+
+Any suggestions?
