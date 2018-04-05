@@ -2,69 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Welcome | Our Solar System</title>
-    <meta name="description" content="Test A-Frame Site | VR Web Mall">
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-    <script type="text/javascript">
+    <title>Our Solar System | MindPw3r.com</title>
+    <meta name="description" content="Our Solar System in VR">
+    
+    <script type="text/javascript" src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
 
-      /*
-      function hideCurrent() {
-        var scene = document.querySelector('a-scene');
-        if (scene.hasLoaded) {
-          run();
-        } else {
-          scene.addEventListener('loaded', run);
-        }
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-        function run () {
-          /*
-          var entity = scene.querySelector('a-entity');
-          entity.setAttribute('material', 'color', 'red');
-          */
-          /*
-          jQuery('a-cylinder').animate({
-              height: "-=1",
-              radius: "-=1"
-            }, 1000);
-          */
-          // jQuery('a-plane').attr('height', '0').attr('width', '0');
-          // jQuery('a-box').attr('height', '0').attr('width', '0');
-          // jQuery('a-sphere').attr('radius', '0');
-          /*
-        }
-      }
-      */
-      function hidePlanets() {
-        jQuery('#sun').attr('visible', false);
-        jQuery('#mercury').attr('visible', false);
-        jQuery('#venus').attr('visible', false);
-        jQuery('#earth').attr('visible', false);
-        jQuery('#moon').attr('visible', false);
-        jQuery('#mars').attr('visible', false);
-        jQuery('#jupiter').attr('visible', false);
-        jQuery('#saturn').attr('visible', false);
-        jQuery('#uranus').attr('visible', false);
-        jQuery('#neptune').attr('visible', false);
-      }
-      function showPlanet(planet){
-        hidePlanets();
-        jQuery('#' +planet).attr('visible', true);
-      }
-      jQuery(document).ready(function(){
-        jQuery('a').on('click', function(e){  
-          e.preventDefault();
-        })
-      });
-
-    </script>
-
-
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></link>
     <style type="text/css">
       #heads-up-display {
         background-color: rgba(51, 51, 51, 0.5);
@@ -80,6 +26,9 @@
         border-right: solid 1px #CACACA;
         padding: 0 10px;
       }
+      #navbar-mobile-btn {
+        background-color: #CACACA;
+      }
     </style>
 
   </head>
@@ -87,7 +36,7 @@
 
     <nav id="heads-up-display" class="navbar navbar-expand-md fixed-top">
       <a class="navbar-brand" href="#">Our Solar System</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" id="navbar-mobile-btn" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -131,10 +80,10 @@
             </div>
           </li -->
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
+        <!-- form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form -->
       </div>
     </nav>
     
@@ -282,5 +231,64 @@
 
     </a-scene>
 
+    <!-- Latest compiled and minified jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+      /*
+      function hideCurrent() {
+        var scene = document.querySelector('a-scene');
+        if (scene.hasLoaded) {
+          run();
+        } else {
+          scene.addEventListener('loaded', run);
+        }
+
+        function run () {
+          /*
+          var entity = scene.querySelector('a-entity');
+          entity.setAttribute('material', 'color', 'red');
+          */
+          /*
+          jQuery('a-cylinder').animate({
+              height: "-=1",
+              radius: "-=1"
+            }, 1000);
+          */
+          // jQuery('a-plane').attr('height', '0').attr('width', '0');
+          // jQuery('a-box').attr('height', '0').attr('width', '0');
+          // jQuery('a-sphere').attr('radius', '0');
+          /*
+        }
+      }
+      */
+      function hidePlanets() {
+        jQuery('#sun').attr('visible', false);
+        jQuery('#mercury').attr('visible', false);
+        jQuery('#venus').attr('visible', false);
+        jQuery('#earth').attr('visible', false);
+        jQuery('#moon').attr('visible', false);
+        jQuery('#mars').attr('visible', false);
+        jQuery('#jupiter').attr('visible', false);
+        jQuery('#saturn').attr('visible', false);
+        jQuery('#uranus').attr('visible', false);
+        jQuery('#neptune').attr('visible', false);
+      }
+      function showPlanet(planet){
+        hidePlanets();
+        jQuery('#' +planet).attr('visible', true);
+      }
+      jQuery(document).ready(function(){
+        jQuery('a').on('click', function(e){  
+          e.preventDefault();
+        })
+      });
+
+    </script>
   </body>
 </html>
